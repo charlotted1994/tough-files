@@ -27,16 +27,14 @@ TIMES
 REACT----1MOPR(20)-2----*----3----*----4----*----5----*----6----*----7----*----8
 200200
 
+OUTPT !type NX NY NZ
+         1   4 4 4
+
 MULTI----1----*----2----*----3----*----4----*----5----*----6----*----7----*----8
     1    2    2    6        !for EOS1 or EOS4 nonisothermal
 
 RMECH    mopmech(5)=1  here for mechanics;
 00000
-
-COFT
-F__99F_110
-F__66F__77
-F__55F__66
 
 ENDCY
 
