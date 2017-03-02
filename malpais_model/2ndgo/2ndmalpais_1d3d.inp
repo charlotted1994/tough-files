@@ -1,0 +1,33 @@
+10 10 6 ; no of cell edges in x,y,z directions
+
+0.0 1000.0 2000.0 3000.0 4000.0 5000.0 6000.0 7000.0 8000.0 9000.0
+
+0.0 1000.0 2000.0 2500.0 3000.0 3250.0 3500.0 4000.0 5000.0 6000.0
+
+-5500.0 -4600.0 -4500.0 -1500.0 -500.0 0.0
+
+1 5 4 5 ; iinj jinj kwcase1 kwcase2 (well x,y indices cased well first, last z indices)
+1 ; nopenseg
+2 3 ; first and last z indices of open well segments
+INCON_malpnofault
+
+5 ; no. of layers
+bfill -500.0 0. 0.1 1.0e-17 1.0e-17 1.0e-17 
+tvolc -1500.0 -500.0 0.1 1.0e-12 1.0e-12 1.0e-12
+silic -4500.0 -1500.0 0.1 1.0e-12 1.0e-12 1.0e-12
+karst -4600.0 -4500.0 0.2 1.0e-13 1.0e-13 1.0e-15
+carbs -5500.0 -4600.0 0.2 1.0e-17 1.0e-17 1.0e-17
+
+0 ; layer boundaries in metres so no conversion
+
+0 1 ; no flow bc at x(1)
+1 1 ; 
+1 1 ; constant fluid pressure bcs at z(1) and z(nx)
+
+0.0988 0.1078 1.8e-8 
+0
+
+1025 -9.80 10.8e6
+
+0025. -0.03
+
